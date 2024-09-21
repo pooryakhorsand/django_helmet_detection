@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}CCTV Table{% endblock %}
+{% block css_file %}{% static 'helmet_detection/css/cctv_table.css' %}{% endblock %}
+
+{% block content %}
+    <h1>CCTV Table</h1>
+
+    <!-- Filter Form -->
+    <form method="GET" action="{% url 'helmet_detection:cctv_table' %}" class="filter-form">
+        <label for="filter">Filter by:</label>
+        <select name="filter" id="filter">
+            <option value="all" {% if request.GET.filter == 'all' %}selected{% endif %}>All</option>
+            <option value="today" {% if request.GET.filter == 'today' %}selected{% endif %}>Today</option>
+            <option value="yesterday" {% if request.GET.filter == 'yesterday' %}selected{% endif %}>Yesterday</option>
+            <option value="this_week" {% if request.GET.filter == 'this_week' %}selected{% endif %}>This Week</option>
+        </select>
+        <button type="submit" class="filter-btn">Apply</button>
+    </form>
+
+    <!-- Table of CCTV Predictions -->
+    <div class="table-container">
+        <table class="records-table">
+            <thead>
+                <tr>
+                    <th>Image Name</th>
+                    <th>Workshop</th>
+                    <th>Prediction Result</th>
+                    <th>Created At</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for cctv_record in cctv_records %}
+                    <tr>
+                        <td>{{ cctv_record.image_name }}</td>
+                        <td>{{ cctv_record.workshop_name }}</td>
+                        <td>{{ cctv_record.prediction_result }}</td>
+                        <td>{{ cctv_record.created_at|date:"Y-m-d H:i" }}</td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="4">No records found.</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Helmet Detection{% endblock %}</title>
+    <link rel="stylesheet" href="{% block css_file %}{% static 'helmet_detection/css/styles.css' %}{% endblock %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-logo">
+            <i class="fas fa-helmet-safety"></i> Helmet Detection
+        </div>
+
+        <!-- Conditional logic for index, cctv_table, and image_table pages -->
+        {% if request.resolver_match.url_name == "index" %}
+        <div class="navbar-links-container">
+            <ul class="navbar-links">
+                <li><a href="{% url 'helmet_detection:index' %}">Home</a></li>
+                <!-- Table Dropdown -->
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Table</a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'helmet_detection:cctv_table' %}">CCTV Table</a>
+                        <a href="{% url 'helmet_detection:image_table' %}">Image Table</a>
+                    </div>
+                </li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'accounts:user_logout' %}">Logout</a></li>
+                {% endif %}
+            </ul>
+        </div>
+        {% elif request.resolver_match.url_name == "cctv_table" %}
+        <div class="navbar-links-container">
+            <ul class="navbar-links">
+                <li><a href="{% url 'helmet_detection:index' %}">Home</a></li>
+                <li><a href="{% url 'helmet_detection:cctv_table' %}">CCTV Table</a></li>
+            </ul>
+        </div>
+        {% elif request.resolver_match.url_name == "image_table" %}
+        <div class="navbar-links-container">
+            <ul class="navbar-links">
+                <li><a href="{% url 'helmet_detection:index' %}">Home</a></li>
+                <li><a href="{% url 'helmet_detection:image_table' %}">Image Table</a></li>
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div> <!-- Closing div for .container -->
+
+    <!-- Include external JavaScript file -->
+    <script src="{% static 'helmet_detection/js/script.js' %}"></script>
+</body>
+</html>

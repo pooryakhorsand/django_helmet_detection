@@ -1,0 +1,70 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Helmet Detection{% endblock %}
+{% block css_file %}{% static 'helmet_detection/css/styles.css' %}{% endblock %}
+
+{% block content %}
+    <!-- Main Container -->
+    <div class="left-panel">
+        <!-- Image Upload Form -->
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <!-- Hidden field to hold the selected model value -->
+            <input type="hidden" id="selected_model" name="selected_model" value="">
+
+            <!-- Image Upload Buttons for Workshops -->
+            <button type="submit" class="btn-model btn-upload" id="btn-model1" name="model" value="first" onclick="selectModel('model1', this, 'image1')">Workshop 1 Image</button>
+            <button type="submit" class="btn-model btn-upload" id="btn-model2" name="model" value="second" onclick="selectModel('model2', this, 'image2')">Workshop 2 Image</button>
+            <button type="submit" class="btn-model btn-upload" id="btn-model3" name="model" value="third" onclick="selectModel('model3', this, 'image3')">Workshop 3 Image</button>
+        </form>
+
+        <!-- CCTV Upload Form -->
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <button type="submit" class="btn-model btn-upload" id="btn-model1" name="model" value="first_cctv">Workshop 1 CCTV</button>
+            <button type="submit" class="btn-model btn-upload" id="btn-model2" name="model" value="second_cctv">Workshop 2 CCTV</button>
+            <button type="submit" class="btn-model btn-upload" id="btn-model3" name="model" value="third_cctv">Workshop 3 CCTV</button>
+        </form>
+
+        <!-- Image containers with overlay text -->
+        <div class="image-container" id="image1-container">
+            <img src="{% static 'helmet_detection/img/1.jpg' %}" id="image1" class="workshop-image">
+            <div class="image-overlay">Workshop 1</div>
+        </div>
+        <div class="image-container" id="image2-container">
+            <img src="{% static 'helmet_detection/img/2.jpg' %}" id="image2" class="workshop-image">
+            <div class="image-overlay">Workshop 2</div>
+        </div>
+        <div class="image-container" id="image3-container">
+            <img src="{% static 'helmet_detection/img/3.jpg' %}" id="image3" class="workshop-image">
+            <div class="image-overlay">Workshop 3</div>
+        </div>
+    </div>
+
+    <div class="right-panel">
+        <h2 class="output-title">Output</h2>
+        {% if uploaded_image_url %}
+            <h2>Uploaded Image:</h2>
+            <img src="{{ uploaded_image_url }}" alt="Uploaded Image" class="output-image" id="outputImage">
+
+            <!-- Button group container -->
+            <div class="button-group">
+                <button class="btn-upload btn-save" onclick="saveImage()">Save Image</button>
+                <button class="btn-upload btn-save" id="btn-save-cropped" onclick="saveCroppedImages()">Save Cropped Images</button>
+            </div>
+        {% endif %}
+
+        {% if cropped_image_urls %}
+            <p>Number of people without helmets: {{ no_helmet_count }}</p>
+            <div id="cropped-images-container">
+                {% for cropped_image_url in cropped_image_urls %}
+                    <img src="{{ cropped_image_url }}" alt="Cropped Image" class="cropped-image">
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
