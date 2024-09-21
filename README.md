@@ -3,12 +3,6 @@
 ## Overview
 This application is developed to enhance safety protocols at the Iran National Steel Group by providing real-time monitoring of helmet usage among workers. Utilizing advanced computer vision techniques and machine learning models, the application effectively detects when workers are not wearing helmets, ensuring compliance with safety regulations.
 
-
-## Objectives
-- **Enhance Worker Safety**: Minimize the risk of injuries by ensuring all workers are wearing helmets at all times.
-- **Data-Driven Decisions**: Enable safety managers to access real-time data regarding helmet usage and violations, leading to informed decision-making.
-- **Custom Solutions**: Allow for customization of detection models for specific workshops, ensuring the application is tailored to the unique environments of each site.
-
 ## Table of Contents
 - [Features](#features)
 - [Architecture](#architecture)
@@ -24,17 +18,16 @@ This application is developed to enhance safety protocols at the Iran National S
 
 ## Features
 - **Real-Time Detection**: Utilizes YOLO (You Only Look Once) for fast and accurate helmet detection.
-- **Workshop Customization**: Each workshop has a custom-trained model based on specific datasets, improving detection accuracy tailored to each environment.
-- **Database Notifications**: If a worker is detected without a helmet for more than 15 seconds, a notification is logged in a PostgreSQL database for safety monitoring and reporting.
-- **API Integration**: Provides RESTful API endpoints for interacting with the detection system, allowing users to upload images and receive prediction results.
-- **Scalable Design**: The system can be expanded with additional workshops or cameras as needed, making it suitable for larger industrial setups.
+- **Workshop Customization**: Each workshop has a custom-trained model based on specific datasets, improving detection accuracy.
+- **Database Notifications**: If a worker is detected without a helmet for more than 15 seconds, a notification is logged in a PostgreSQL database for safety monitoring.
+- **API Integration**: Provides endpoints for interacting with the detection system, allowing users to upload images and receive prediction results.
+- **Scalable Design**: The system can be expanded with additional workshops or cameras as needed.
 
 ## Architecture
-The application architecture consists of the following components:
-- **CCTV Setup**: Three CCTV cameras are installed in three different workshops to capture real-time video feeds of workers.
-- **Data Processing**: The captured video data is processed using a YOLO model trained on custom datasets. This allows the application to accurately identify whether workers are wearing helmets.
-- **Database Integration**: Notifications regarding helmet violations are stored in a PostgreSQL database, allowing safety managers to track compliance and identify patterns of behavior.
-- **API**: The application exposes RESTful API endpoints for image uploads and results retrieval, facilitating integration with other systems or applications.
+- **CCTV Setup**: Three CCTV cameras are installed in three different workshops to capture video feeds.
+- **Data Processing**: The captured video data is processed in real-time using a YOLO model trained on custom datasets.
+- **Database Integration**: Notifications about helmet violations are stored in a PostgreSQL database, allowing for easy access and reporting.
+- **API**: The application exposes RESTful API endpoints for image uploads and results retrieval.
 
 ## API
 The application provides several API endpoints:
