@@ -1,9 +1,8 @@
 # Helmet Detection Application 
 
 ## Overview
-In industrial environments, worker safety is of paramount importance. This Helmet Detection Application has been developed for the Iran National Steel Group to monitor helmet compliance among workers in real-time. By leveraging advanced computer vision techniques and machine learning models, this application aims to significantly reduce the risk of injuries related to head safety.
+This application is developed to enhance safety protocols at the Iran National Steel Group by providing real-time monitoring of helmet usage among workers. Utilizing advanced computer vision techniques and machine learning models, the application effectively detects when workers are not wearing helmets, ensuring compliance with safety regulations.
 
-The system utilizes CCTV cameras strategically placed in three workshops to continuously monitor workers. When a worker is detected without a helmet for more than 15 seconds, a notification is sent to a PostgreSQL database, enabling timely interventions. This proactive approach to safety helps ensure a secure working environment and compliance with safety regulations.
 
 ## Objectives
 - **Enhance Worker Safety**: Minimize the risk of injuries by ensuring all workers are wearing helmets at all times.
