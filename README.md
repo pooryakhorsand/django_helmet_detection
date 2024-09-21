@@ -6,7 +6,6 @@ This application is developed to enhance safety protocols at the Iran National S
 ## Table of Contents
 - [Features](#features)
 - [Architecture](#architecture)
-- [API](#api)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Customization](#customization)
@@ -29,10 +28,7 @@ This application is developed to enhance safety protocols at the Iran National S
 - **Database Integration**: Notifications about helmet violations are stored in a PostgreSQL database, allowing for easy access and reporting.
 - **API**: The application exposes RESTful API endpoints for image uploads and results retrieval.
 
-## API
-The application provides several API endpoints:
-- **POST /api/upload/**: Upload an image for helmet detection.
-- **GET /api/results/**: Retrieve the results of the helmet detection process.
+
   
 ### Example Usage
 #### Upload Image
