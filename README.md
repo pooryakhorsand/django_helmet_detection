@@ -39,8 +39,7 @@ Here are demonstration videos of the Helmet Detection Application in action. Eac
 
 
 ### 3. Workshop 2
-[![Workshop 2](https://img.youtube.com/vi/your_video_id/0.jpg)](https://www.youtube.com/watch?v=your_video_id)
-*Monitoring helmet usage in Workshop 2.*
+([https://img.youtube.com/vi/your_video_id/0.jpg)](https://www.youtube.com/watch?v=your_video_id](https://github.com/user-attachments/assets/35e9fb9b-8dbe-4721-a5cb-37d3ed1457a9))
 
 ### 4. Workshop 3
 [![Workshop 3](https://img.youtube.com/vi/your_video_id/0.jpg)](https://www.youtube.com/watch?v=your_video_id)
