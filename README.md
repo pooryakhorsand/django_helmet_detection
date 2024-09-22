@@ -6,7 +6,6 @@ This application is developed to enhance safety protocols at the Iran National S
 ## Table of Contents
 - [Features](#features)
 - [Architecture](#architecture)
-- [Usage](#usage)
 - [Customization](#customization)
 - [Videos](#videos)
 - [Research Paper](#research-paper)
