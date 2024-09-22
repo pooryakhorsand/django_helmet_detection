@@ -33,7 +33,6 @@ Here are demonstration videos of the Helmet Detection Application in action. Eac
 
 ### 1. Application Overview
 [![Application Overview](https://github.com/user-attachments/assets/18673da1-241b-4dbd-94f5-2fcb07d2f316)
-*Watch how the application monitors helmet usage in real-time and sends notifications to the database.*
 
 ### 2. Workshop 1
 [![Workshop 1](https://img.youtube.com/vi/your_video_id/0.jpg)](https://www.youtube.com/watch?v=your_video_id)
