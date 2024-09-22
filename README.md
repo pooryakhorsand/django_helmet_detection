@@ -32,11 +32,11 @@ This application is developed to enhance safety protocols at the Iran National S
 Here are demonstration videos of the Helmet Detection Application in action. Each video shows the system in use for different workshops.
 
 ### 1. Application Overview
-[![Application Overview](https://github.com/user-attachments/assets/18673da1-241b-4dbd-94f5-2fcb07d2f316)
+(![Application Overview](https://github.com/user-attachments/assets/18673da1-241b-4dbd-94f5-2fcb07d2f316)
 
 ### 2. Workshop 1
-[![Workshop 1](https://img.youtube.com/vi/your_video_id/0.jpg)](https://www.youtube.com/watch?v=your_video_id)
-*Helmet detection in Workshop 1 with the custom-trained YOLOv8 model.*
+(https://github.com/user-attachments/assets/f04521b5-d4d4-4c09-9cf6-9dfc8ea3d1e8)
+
 
 ### 3. Workshop 2
 [![Workshop 2](https://img.youtube.com/vi/your_video_id/0.jpg)](https://www.youtube.com/watch?v=your_video_id)
