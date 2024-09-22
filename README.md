@@ -28,8 +28,21 @@ This application is developed to enhance safety protocols at the Iran National S
 - **API**: The application exposes RESTful API endpoints for image uploads and results retrieval.
 
 
-  
-### Example Usage
-#### Upload Image
-```bash
-curl -X POST http://localhost:8000/api/upload/ -F 'image=@/path/to/image.jpg'
+## Videos
+Here are demonstration videos of the Helmet Detection Application in action. Each video shows the system in use for different workshops.
+
+### 1. Application Overview
+[![Application Overview](https://img.youtube.com/vi/your_video_id/0.jpg)](https://www.youtube.com/watch?v=your_video_id)
+*Watch how the application monitors helmet usage in real-time and sends notifications to the database.*
+
+### 2. Workshop 1
+[![Workshop 1](https://img.youtube.com/vi/your_video_id/0.jpg)](https://www.youtube.com/watch?v=your_video_id)
+*Helmet detection in Workshop 1 with the custom-trained YOLOv8 model.*
+
+### 3. Workshop 2
+[![Workshop 2](https://img.youtube.com/vi/your_video_id/0.jpg)](https://www.youtube.com/watch?v=your_video_id)
+*Monitoring helmet usage in Workshop 2.*
+
+### 4. Workshop 3
+[![Workshop 3](https://img.youtube.com/vi/your_video_id/0.jpg)](https://www.youtube.com/watch?v=your_video_id)
+*Real-time detection of helmet violations in Workshop 3.*
