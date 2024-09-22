@@ -50,3 +50,4 @@ https://github.com/user-attachments/assets/6fc5c81b-d7a7-4061-b655-bfd109752b96
 
 This research paper documents the development and implementation of the Helmet Detection Application designed for the Iran National Steel Group. It explores the methodology employed in training custom YOLO models for each workshop, the data collection process using CCTV feeds, and the system's effectiveness in enhancing workplace safety. The paper highlights key findings related to real-time helmet detection and the impact of automated alerts on compliance with safety regulations.
 
+[Two-stage safety helmet detection in industrial environment using YOLO models.pdf](https://github.com/user-attachments/files/17089787/Two-stage.safety.helmet.detection.in.industrial.environment.using.YOLO.models.pdf)
