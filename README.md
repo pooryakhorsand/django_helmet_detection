@@ -34,7 +34,7 @@ https://github.com/user-attachments/assets/b56eafc0-451b-4c31-814b-27908e4521a8
 ### 2. Workshop 1
 
 
-https://github.com/user-attachments/assets/18f98482-3f9c-4a13-b89d-0f9fb3d9dcd2
+https://github.com/user-attachments/assets/b2046987-6f60-43d8-b459-a4417bf1fbe8
 
 
 
