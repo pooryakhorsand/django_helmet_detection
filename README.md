@@ -32,7 +32,11 @@ https://github.com/user-attachments/assets/b56eafc0-451b-4c31-814b-27908e4521a8
 
 
 ### 2. Workshop 1
-https://github.com/user-attachments/assets/e48818a5-2e75-473f-a4aa-8c4a96d9e9d2
+
+
+https://github.com/user-attachments/assets/18f98482-3f9c-4a13-b89d-0f9fb3d9dcd2
+
+
 
 
 
